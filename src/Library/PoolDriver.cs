@@ -5,7 +5,7 @@ namespace Library
     public class PoolDriver
     {
         private int _maximumCapacity;
-        private List<Passenger> _listOfPassengers;
+        private List<Passenger> _listOfPassengers = new List<Passenger>();
 
         public int MaximumCapacity
         {

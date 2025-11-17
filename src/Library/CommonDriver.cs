@@ -11,8 +11,9 @@ namespace Library
         }
 
         public CommonDriver(
-            string name, string lastName, string id, Vehicle vehicle, string biography
-        ) : base(name, lastName, id, vehicle, biography)
+            string name, string lastName, string id,
+            string profileImageUrl, Vehicle vehicle, string biography
+        ) : base(name, lastName, id, profileImageUrl, vehicle, biography)
         {
         }
 

@@ -18,8 +18,9 @@ namespace Library
         }
 
         public Driver(
-            string name, string lastName, string id, Vehicle vehicle, string biography
-        ) : base(name, lastName, id)
+            string name, string lastName, string id, 
+            string profileImageUrl, Vehicle vehicle, string biography
+        ) : base(name, lastName, id, profileImageUrl)
         {
             this.Vehicle = vehicle;
             this.Biography = biography;
