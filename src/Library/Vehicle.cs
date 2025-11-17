@@ -4,7 +4,7 @@ namespace Library
     {
         protected string _mark, _model, _color;
         protected double _speed = 0.0;
-        protected bool _status = false;
+        protected bool _engineStatus = false;
 
         public string Mark
         {
@@ -30,10 +30,10 @@ namespace Library
             protected set { this._speed = value; }
         }
 
-        public bool Status
+        public bool EngineStatus
         {
-            get { return this._status; }
-            protected set { this._status = value; }
+            get { return this._engineStatus; }
+            protected set { this._engineStatus = value; }
         }
 
         public Vehicle(string mark, string model, string color)
@@ -45,12 +45,12 @@ namespace Library
 
         public void Start()
         {
-            this.Status = true;
+            this.EngineStatus = true;
         }
 
         public void Stop()
         {
-            this.Status = false;
+            this.EngineStatus = false;
         }
 
         public void Accelerate()
