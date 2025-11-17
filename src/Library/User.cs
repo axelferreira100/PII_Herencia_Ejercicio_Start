@@ -3,7 +3,7 @@ namespace Library
     public abstract class User
     {
         protected string name, lastName, id;
-        protected int calification;
+        protected int calification = 0;
 
         public string Name
         {
@@ -27,6 +27,13 @@ namespace Library
         {
             get { return this.calification; }
             protected set { this.calification = value; }
+        }
+
+        public User(string name, string lastName, string id)
+        {
+            this.Name = name;
+            this.LastName = lastName;
+            this.Id = id;
         }
     }
 }
