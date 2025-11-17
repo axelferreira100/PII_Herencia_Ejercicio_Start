@@ -16,5 +16,13 @@ namespace Library
             get { return this.biography; }
             protected set { this.biography = value; }
         }
+
+        public Driver(
+            string name, string lastName, string id, Vehicle vehicle, string biography
+        ) : base(name, lastName, id)
+        {
+            this.Vehicle = vehicle;
+            this.Biography = biography;
+        }
     }
 }

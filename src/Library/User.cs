@@ -28,5 +28,12 @@ namespace Library
             get { return this.calification; }
             protected set { this.calification = value; }
         }
+
+        public User(string name, string lastName, string id)
+        {
+            this.Name = name;
+            this.LastName = lastName;
+            this.Id = id;
+        }
     }
 }

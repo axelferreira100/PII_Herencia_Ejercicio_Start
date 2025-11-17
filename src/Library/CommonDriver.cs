@@ -11,15 +11,9 @@ namespace Library
         }
 
         public CommonDriver(
-            string name, string lastName, string id, 
-            Vehicle vehicle, string biography
-        )
+            string name, string lastName, string id, Vehicle vehicle, string biography
+        ) : base(name, lastName, id, vehicle, biography)
         {
-            this.Name = name;
-            this.LastName = lastName;
-            this.Id = id;
-            this.Vehicle = vehicle;
-            this.Biography = biography;
         }
 
         public void ChangePassenger(Passenger passenger)
