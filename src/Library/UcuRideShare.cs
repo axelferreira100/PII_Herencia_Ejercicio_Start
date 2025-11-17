@@ -1,4 +1,7 @@
 using System.Collections.Generic;
+using System;
+using System.IO;
+using Ucu.Poo.Twitter;
 
 namespace Library
 {
@@ -33,12 +36,25 @@ namespace Library
 
         private void PostOnTwitter(Driver user)
         {
+            TwitterImage twitter = new TwitterImage();
+            string profileImageUrl = user.ProfileImageUrl;
+            string path = File.Exists($@"../../{profileImageUrl}") ? $@"../../{profileImageUrl}" : $@"{profileImageUrl}";
             
+            Console.WriteLine(twitter.PublishToTwitter(
+                $"¡Bienvenido {user.Name}! Nuevo conductor del UCU RideShare.\n" +
+                    $"Biografía del nuevo conductor: {user.Biography}", path
+            ));
         }
 
         private void PostOnTwitter(Passenger user)
         {
-            
+            TwitterImage twitter = new TwitterImage();
+            string profileImageUrl = user.ProfileImageUrl;
+            string path = File.Exists($@"../../{profileImageUrl}") ? $@"../../{profileImageUrl}" : $@"{profileImageUrl}";
+
+            Console.WriteLine(twitter.PublishToTwitter(
+                $"¡Bienvenido {user.Name}! Nuevo pasajero del UCU RideShare.", path
+            ));
         }
     }
 }
