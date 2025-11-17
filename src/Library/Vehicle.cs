@@ -36,6 +36,13 @@ namespace Library
             private set { this._status = value; }
         }
 
+        public Vehicle(string mark, string model, string color)
+        {
+            this.Mark = mark;
+            this.Model = model;
+            this.Color = color;
+        }
+
         public void Start()
         {
             this.Status = true;
