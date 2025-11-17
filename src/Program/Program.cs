@@ -1,37 +1,22 @@
-﻿namespace Ucu.Poo.RideShare
+﻿using Library;
+
+namespace Ucu.Poo.RideShare
 {
     class Program
     {
         static void Main(string[] args)
         {
-            /*
-            En éste método deberas mostrar un ejemplo de funcionamiento de tu programa. A continuación te
-            planteamos un ejemplo de como hacerlo. Esto no significa que te limites a hacer solamente esto, debes pensar
-            en grande!
+            Vehicle vehicle1 = new Car("Volkswagen", "Golf", "Blanco");
+            Vehicle vehicle2 = new Motorcycle("Kawasaki", "Ninja 400", "Verde");
+            
+            Passenger passanger = new Passenger("Rick", "Moranis", "3.948.453-2", "rick.jpg");
+            CommonDriver driver = new CommonDriver("Bill", "Caddyshack", "3.565.235-4", "bill.jpg", vehicle2, "Conductor responsable y puntual, siempre ofrece viajes seguros en su vehículo Caddyshack.");
+            PoolDriver poolDriver = new PoolDriver("Dan"," Aykroyd", "4.566.785-6", "dan.jpg", vehicle1, "Especialista en viajes compartidos, optimiza rutas y transporta hasta 3 pasajeros con eficiencia.", 3);
+            UcuRideShare rideShare = new UcuRideShare();
 
-            Usuario pasajero1 = nuevo Pasajero()
-            Usuario pasajero2 = nuevo Pasajero()
-            Usuario pasajero3 = nuevo Pasajero()
-            Usuario conductor1 = nuevo Conductor()
-            Usuario conductorPool1 = nuevo ConductorPool(maxPasajeros = 3)
-            UcuRideShare rideShare = nuevo UcuRideShare()
-
-            rideShare.Add(conductor1)
-            Se publica en Twitter un nuevo conductor!
-
-            rideShare.Add(conductorPool1)
-            Se publica en Twitter un nuevo conductor!
-
-            rideShare.Add(pasajero1)
-            Se publica en Twitter nuevo registro de pasajero!
-
-            rideShare.Add(pasajero2)
-            Se publica en Twitter nuevo registro de pasajero!
-
-            rideShare.Add(pasajero3)
-            Se publica en Twitter nuevo registro de pasajero!
-
-            */
+            rideShare.AddUser(passanger);
+            rideShare.AddUser(driver);
+            rideShare.AddUser(poolDriver);
         }
     }
 }
