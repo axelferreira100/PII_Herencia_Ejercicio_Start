@@ -3,7 +3,7 @@ namespace Library
     public abstract class User
     {
         protected string name, lastName, id;
-        protected int calification;
+        protected int calification = 0;
 
         public string Name
         {

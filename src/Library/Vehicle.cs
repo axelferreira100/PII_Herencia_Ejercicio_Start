@@ -1,6 +1,6 @@
 namespace Library
 {
-    public class Vehicle
+    public abstract class Vehicle
     {
         private string _mark, _model, _color;
         private double _speed = 0.0;
@@ -34,13 +34,6 @@ namespace Library
         {
             get { return this._status; }
             private set { this._status = value; }
-        }
-
-        public Vehicle(string mark, string model, string color)
-        {
-            this.Mark = mark;
-            this.Model = model;
-            this.Color = color;
         }
 
         public void Start()

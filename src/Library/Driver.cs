@@ -1,6 +1,6 @@
 namespace Library
 {
-    public abstract class Driver
+    public abstract class Driver : User
     {
         protected Vehicle vehicle;
         protected string biography;
